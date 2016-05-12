@@ -30,41 +30,32 @@
  * упростить процесс отгадывания числа по заданной его первой цифре, написав
  * соответствующую программу.
  */
-$input = 8;
+$input = 1;
 if ($input == 1) {
   $output = 997 - 799;
-  echo $output;
 }
 elseif ($input == 2) {
   $output = 996 - 699;
-  echo $output;
 }
 elseif ($input == 3) {
   $output = 995 - 599;
-  echo $output;
 }
 elseif ($input == 4) {
   $output = 994 - 499;
-  echo $output;
 }
 elseif ($input == 5) {
   $output = 993 - 399;
-  echo $output;
 }
 elseif ($input == 6) {
   $output = 992 - 299;
-  echo $output;
 }
 elseif ($input == 7) {
   $output = 991 - 199;
-  echo $output;
 }
 elseif ($input == 8) {
   $output = 990 - 99;
-  echo $output;
 }
 elseif ($input == 9) {
   $output = 998 - 899;
-  echo $output;
 }
-
+echo $output;
