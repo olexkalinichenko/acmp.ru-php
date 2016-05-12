@@ -17,8 +17,17 @@
  * Напишите программу, возводящую число, оканчивающееся на 5, в квадрат для
  * того, чтобы Вася смог проверить свои навыки.
  */
-$input = 5;
-if ($input ) {
-  $input *= $input ;
-  echo $input;
+$input = 25;
+$output = 0;
+
+$number = (string) $input;
+if (strlen($number) > 1 && substr($number, -1) == 5) {
+  $a = substr($number, 0, -1);
+  $b = $a + 1;
+  $output = ($a * $b) . '25';
 }
+else {
+  $output = $input * $input;
+}
+
+print $output;
