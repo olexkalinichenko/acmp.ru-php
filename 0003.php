@@ -22,7 +22,7 @@ $output = 0;
 
 $number = (string) $input;
 if (strlen($number) > 1 && substr($number, -1) == 5) {
-  $a = substr($number, 0, -1);
+  $a = (int) substr($number, 0, -1);
   $b = $a + 1;
   $output = ($a * $b) . '25';
 }
