@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: sasha
  * Date: 06.08.16
- * Time: 13:28
+ * Time: 14:32
  */
 //Написати програму яка виконує порівняння  кубикив
 $user1 = mt_rand(1, 2);
