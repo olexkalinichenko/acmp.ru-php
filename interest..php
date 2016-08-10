@@ -11,25 +11,29 @@
  */
 
 //Сума вкладу user
-$userBalance = 10000;
+$user_balance = 10000;
 //10% що  дає банк
 $interest = 0.1;
-//Вік user
-$userAge = 16;
+//Вік Usera
+$user_age = 16;
 
-if ($userBalance) {
-  $sunInterest = $userBalance * $interest;
-  echo "Сума вкладу : {$userBalance} руб.<br>";
-  echo "Сума : {$sunInterest} руб. виплачена за перший рік  в розмірі 10% від суми вклада.<br>";
+if ($user_balance) {
+  // відсотоки за перший рік
+  $first_user_balance = $user_balance * $interest;
+  echo "Сума вкладу : {$user_balance} руб.<br>";
+  echo "Сума : {$first_user_balance} руб. виплачена за перший рік  в розмірі 10% від суми вклада.<br>";
 }
-// Робимо збільшення з 10000р. до 1000000р.
-for ($a = 10000; $a < 1000000; $a *= 1.10) {
+
+//Робимо збільшення з 10000р. до 1000000р.
+for ($end_user_balance = $user_balance; $end_user_balance < 1000000; $end_user_balance *= 1.10) {
+  //  nop
 }
-//echo $a . '<br>';
-//Визначаємо за скільки років накопичеться 1000000р.
-if ($a && $userBalance) {
-  $sumYears = log($a / $userBalance) / log(1 + $interest);
-  $age = $userAge + $sumYears;
-  echo " Сума : {$a} руб. виплачена за : {$sumYears} років <br>";
-  echo "Отже, якщо зараз Useru : {$userAge} років, то мільйон він отримає в : {$userAge} років + {$sumYears} років = {$age} років. ";
+
+if ($end_user_balance) {
+  //Формула n = log(FVn/PVn)/log(1+r) - через скільки років Юзер отримає 1000000 руб.
+  $sum_years = log($end_user_balance / $user_balance) / log(1 + $interest);
+  //Вік Юзера, коли він отримає 1000000 руб.
+  $age = $user_age + $sum_years;
+  echo " Сума : {$end_user_balance} руб. виплачена за : {$sum_years} років <br>";
+  echo "Отже, якщо зараз Useru : {$user_age} років, то мільйон він отримає в : {$user_age} років + {$sum_years} років = {$age} років. ";
 }
