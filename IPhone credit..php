@@ -12,28 +12,28 @@
  * за раз (зекономлених на шкільних сніданках). Питання, коли він позбудеться
  * від боргу? У скільки школяреві обійшовся айфон?
  */
-// Борг Юзера перед банком
-$creditBalance = 40000;
-//  Банк нараховує 3% в місяць від суми
+// Кредит виданий банком Юзеру
+$credit_balance = 40000;
+//Ставка по кредиту - 3%
 $percent = 1.03;
-// А також 1000 руб. в місяць комісії
-$servicePayment = 1000;
-// Юзер платить 5000 руб. в місяць
-$monthlyPayment = 5000;
-// Скільки всього відав банку Юзер
-$paymentTotal = 0;
+//Комісія банку 1000 руб.
+$commission = 1000;
+// Юзер сплачує, щомісячно 5000 руб. в місяць
+$monthly_payment = 5000;
+// Сума сплати Юзера в банк
+$sum_payment = 0;
 
 // Підраховуємо витрати за 20 місяців вперед
 for ($month = 1; $month <= 20; $month++) {
-  //Робимо розрахуно : який залишок боргу і скільки виплатив Юзер
-  $creditBalance = ($creditBalance * $percent) + $servicePayment - $monthlyPayment;
-  $paymentTotal = $paymentTotal + $monthlyPayment;
-  echo "{$month} місяць потому : борг = {$creditBalance} руб. выплачено всего :{$paymentTotal} руб. <br>";
+  //Робимо розрахунок : який залишок боргу і скільки виплатив Юзер
+  $credit_balance = ($credit_balance * $percent) + $commission - $monthly_payment;
+  $sum_payment = $sum_payment + $monthly_payment;
+  echo "Борг {$month} місяць : {$credit_balance} руб. Сплачено банку : {$sum_payment} руб. <br>";
 
   // Якщо баланс від'ємний - перериваємо цикл
-  if ($creditBalance < 0) {
-    $paymentTotal = $paymentTotal + $creditBalance;
-    echo "З Юзера досить! Це остання виплата по кредиту : $paymentTotal<br>";
+  if ($credit_balance < 0) {
+    $sum_payment = $sum_payment + $credit_balance;
+    echo "Через 13 місяців Юзер позбавиться боргу. IPhone обійшовся в : {$sum_payment} руб.<br>";
     break;
   }
 }
