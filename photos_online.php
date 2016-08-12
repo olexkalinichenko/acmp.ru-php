@@ -17,7 +17,7 @@ echo "Сума оцінок : {$sum_rates}<br>";
 
 //Кількість оцінок
 $number_of_ratings = count($rating);
-echo "Кільаість оцінок : $number_of_ratings <br>";
+echo "Кільаість оцінок : {$number_of_ratings}<br>";
 
 //Середній бал
 $average_rating = $sum_rates / $number_of_ratings;
