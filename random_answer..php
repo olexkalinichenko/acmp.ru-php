@@ -27,7 +27,7 @@ $random = array_rand($answers);
 //Порівняння ключів масиву з випадковим числом
 foreach ($answers as $key => $values) {
   if ($random == $key) {
-    echo "$question <br>";
-    echo "$random . $values";
+    echo "{$question}<br>";
+    echo "{$random} . {$values}";
   }
 }
